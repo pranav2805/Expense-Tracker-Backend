@@ -4,6 +4,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
 const fs = require('fs');
+const path = require('path');
 const https = require('https');
 const morgan = require('morgan');
 
@@ -58,6 +59,10 @@ app.use('/premium', premiumRoutes);
 app.use(userRoutes);
 app.use(expRoutes);
 app.use('/password', resetpasswordRoutes);
+
+app.use((req, res) => {
+    res.sendFile(path.join(__dirname, `public/${req.url}`));
+})
 
 //app.use(errorController.get404);
 

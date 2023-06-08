@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+}
+
+.center {
+    margin: auto;
+    width: 25%;
+    padding: 25px;
+  }
+
+table {
+    border:1px solid #b3adad;
+    border-collapse:collapse;
+    padding:5px;
+    width: 90%;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+table th {
+    border:1px solid #b3adad;
+    padding:5px;
+    background: #13e4e7;
+    color: #ffffff;
+}
+table td {
+    border:1px solid #b3adad;
+    text-align:center;
+    padding:5px;
+    background: #ffffff;
+    color: #313030;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Table Generator</title> 
+    <link rel="stylesheet" href="../css/style2.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <h1>Day to day expenses</h1>
+    <p style="text-align: left;margin-left: 10px;">05 March 2023</p>
+    <h3>March 2023</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Income</th>
+                <th>Expense</th>
+            </tr>
+        </thead>
+        <tbody id="table-month" name="table-month">
+        </tbody>
+    </table>
+
+    <h3>Yearly Report</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Income</th>
+                <th>Expense</th>
+                <th>Saving</th>
+            </tr>
+        </thead>
+        <tbody id="table-year" name="table-year">
+        </tbody>
+    </table>
+
+    <h3>Notes Report 2023</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody id="table-notes" name="table-notes">
+        </tbody>
+    </table>
+
+    <button onclick="download()" id="downloadExpense">Download File</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="../js/download.js"></script>
+</body>
+</html>

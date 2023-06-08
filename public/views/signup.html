@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up | By Code Info</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="signup-box">
+      <img src="user-icon2.png">
+      <h1>Sign Up Now</h1>
+      <form id="signupForm" action="/signup" method="POST">
+        <label>Username</label>
+        <input type="text" placeholder="enter username" id="username" name="username" required>
+        <label>Email</label>
+        <input type="email" placeholder="enter email" id="email" name="email" required>
+        <label>Password</label>
+        <input type="password" placeholder="enter password" id="password" name="password" required>
+        <!-- <input type="button" value="Submit" /> -->
+        <button class="btn" type="submit">Sign Up</button>
+      </form>
+      <div class="error-msg"></div>
+    <hr>
+    <p class="para-2">
+      Already have an account? <a href="login.html">Login here</a>
+    </p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="../js/main.js"></script>
+
+  </body>
+</html>
+

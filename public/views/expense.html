@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <title>Item Lister</title>
+</head>
+<body>
+  <header id="main-header" class="bg-success text-white p-4 mb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+            <h2 id="header-title">Expense Tracker</h2>
+        </div>
+        
+      </div>
+    </div>
+  </header>
+  <div class="container">
+   <div id="main" class="card card-body">
+    <div>
+      <h3 class="title">Add Expense</h3>
+      <!-- <button id="rzp-button" class="btn btn-primary float-right ">Buy Premium</button> -->
+      <div id="premiumDiv" class="float-lg-right"></div>
+      <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    </div>
+    <form id="addForm" class="form-inline mb-3" action="/expenses" method="POST">
+        <div style="float:left;margin-right:20px;">
+            <label for="amount">Choose expense amount:</label>
+            <input type="number" id="amount" name="amount">
+        </div>
+        <div style="float:left;margin-right:20px;">
+            <label for="description">Choose description:</label>
+            <input type="text" id="description" name="description">
+        </div>
+        <div style="float:left;margin-right:20px;">
+            <label for="category">Choose a category:</label>
+            <select name="category" id="category" name="category">
+                <option value="fuel">Fuel</option>
+                <option value="food">Food</option>
+                <option value="electricity">Electricity</option>
+                <option value="movie">Movie</option>
+                <option value="salary">Salary</option>
+                <option value="salary">Others</option>
+            </select>
+        </div>
+        <br>
+      <button type="submit" class="btn btn-dark float-right ml-5">Add expense</button>
+    </form>
+    <br>
+    <h2 class="title">Expenses</h2>
+    <div class="row">
+      <div class="col-lg-3"><h5>Amount</h5></div>
+      <div class="col-lg-3"><h5>Description</h5></div>
+      <div class="col-lg-3"><h5>Category</h5></div>
+      <div class="col-lg-3">
+        <label for="pageSize">Rows Per Page:</label>
+            <select name="pageSize" id="pageSize" name="pageSize">
+                <option value=3>3</option>
+                <option value=5>5</option>
+                <option value=7>7</option>
+                <option value=9>9</option>
+            </select>
+        <button class="btn" type="submit" onclick="savePageSize()" id="pageSizeBtn">Submit</button>
+      </div>
+    </div>
+    <ul id="expenses" class="list-group"></ul>
+    <div class="pagination" id="pagination"></div>
+    <div class="row">
+      <div class="col">
+        <h5>Downloaded files</h5>
+      </div>
+    </div>
+    <ul id="downloaded" class="list-group"></ul>
+   </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+<script src="../js/expense-main.js"></script>
+
+</body>
+</html>
