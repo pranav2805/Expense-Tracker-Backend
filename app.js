@@ -4,7 +4,6 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
 const fs = require('fs');
-const path = require('path');
 const https = require('https');
 const morgan = require('morgan');
 
@@ -21,8 +20,8 @@ const DownloadedFile = require('./models/downloadedfile');
 const app = express();
 app.use(cors());
 
-const privateKey = fs.readFileSync('server.key');
-const certificate = fs.readFileSync('server.cert');
+// const privateKey = fs.readFileSync('server.key');
+// const certificate = fs.readFileSync('server.cert');
 
 const accessLogStream = fs.createWriteStream(
     path.join(__dirname, 'access.log'),
